@@ -1,0 +1,399 @@
+/* PIXEL CODER GIRLS - ELITE FEMALE DEVELOPER SQUAD */
+
+.pixel-coder-girls-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a0d2e 50%, #0f0a1f 100%);
+  color: var(--text-light);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.girls-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.girls-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(139, 0, 255, 0.4);
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.girls-header p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.girls-showcase {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* GIRLS GRID */
+.girls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.girls-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.girls-grid::-webkit-scrollbar-track {
+  background: rgba(139, 0, 255, 0.1);
+  border-radius: 4px;
+}
+
+.girls-grid::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.girls-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* GIRL CARD */
+.girl-card {
+  background: linear-gradient(135deg, rgba(139, 0, 255, 0.1), rgba(139, 0, 255, 0.05));
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.girl-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.girl-card:hover {
+  background: linear-gradient(135deg, rgba(139, 0, 255, 0.2), rgba(139, 0, 255, 0.1));
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(139, 0, 255, 0.4), inset 0 0 20px rgba(139, 0, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.girl-card.selected {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(139, 0, 255, 0.1));
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.girl-visual {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel-avatar {
+  width: 100%;
+  max-width: 120px;
+  filter: drop-shadow(0 0 10px rgba(139, 0, 255, 0.4));
+}
+
+.girl-info {
+  position: relative;
+  z-index: 2;
+}
+
+.girl-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.girl-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.level-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(139, 0, 255, 0.3), rgba(255, 215, 0, 0.1));
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--primary);
+  letter-spacing: 1px;
+}
+
+/* GIRL PROFILE */
+.girl-profile {
+  background: linear-gradient(135deg, rgba(139, 0, 255, 0.12), rgba(139, 0, 255, 0.06));
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-visual {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.pixel-avatar-large {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 15px rgba(139, 0, 255, 0.5));
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-details h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  letter-spacing: 2px;
+}
+
+.profile-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.profile-specialty {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* STATS SECTION */
+.stats-section,
+.mood-section,
+.abilities-section {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+.stats-section h4,
+.mood-section h4,
+.abilities-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--accent);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-bar {
+  display: grid;
+  grid-template-columns: 90px 1fr 50px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat-bar:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.stat-track {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(139, 0, 255, 0.6);
+}
+
+.stat-value {
+  text-align: right;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+}
+
+/* MOOD SECTION */
+.mood-badge {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  border: 2px solid var(--primary);
+  background: rgba(139, 0, 255, 0.15);
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.mood-badge:hover {
+  background: rgba(139, 0, 255, 0.25);
+  box-shadow: 0 0 15px rgba(139, 0, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.mood-badge.focused {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.15);
+  color: #3498db;
+}
+
+.mood-badge.thinking {
+  border-color: #f39c12;
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+}
+
+.mood-badge.celebrating {
+  border-color: #2ecc71;
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  animation: celebrate 0.6s ease;
+}
+
+.mood-badge.debugging {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(-2deg); }
+  75% { transform: scale(1.1) rotate(2deg); }
+}
+
+/* ABILITIES SECTION */
+.abilities-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.abilities-list li {
+  padding: 0.75rem;
+  background: rgba(139, 0, 255, 0.1);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .girls-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .girls-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .girls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .girls-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .abilities-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PIXEL ANIMATION */
+.pixel-avatar,
+.pixel-avatar-large {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Glow effect animation */
+@keyframes pixelGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(139, 0, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.6));
+  }
+}
+
+.girl-card.selected .pixel-avatar {
+  animation: pixelGlow 1.5s ease-in-out infinite;
+}
+
+/* Hover pulse effect */
+@keyframes pulse-avatar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.girl-card:hover .pixel-avatar {
+  animation: pulse-avatar 0.5s ease-in-out;
+}
