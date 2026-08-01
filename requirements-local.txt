@@ -1,0 +1,13 @@
+# Local development requirements for Ubuntu
+
+# Core and optional packages used by tools/ai_runtime.py
+# Install these inside a Python virtualenv. Pin versions if you need reproducible installs.
+openai
+transformers[sentencepiece]
+sentencepiece
+torch
+llama-cpp-python
+
+# Optional/notes:
+# - If you plan to use a GPU, install the appropriate torch wheel for your CUDA version
+# - On Ubuntu you may need system packages (cmake, libomp-dev, build-essential) for some libraries
